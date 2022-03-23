@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+  background-image: url("./assets/background.jpg");
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  height: 40rem;
+  width: 40rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+  position: relative;
+  background: inherit;
+  overflow: hidden;
+  z-index: 1;
+  margin: 10px;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(78, 92, 172, 0.5);
+  filter: blur(10px);
+  margin: -20px;
+  z-index: -1;
+}
+.App .container .titleName,
+.spanElement {
+  font-size: 900;
+  font-weight: bold;
+  color: rgb(226, 43, 134);
+  margin: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0 0 25px;
+}
+.bottomDiv {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.inputBox {
+  width: 70%;
+  height: 30px;
+  border-radius: 10px;
+  padding-right: 5px;
+}
+.plusButton {
+  border-radius: 50px;
+  height: 40px;
+  width: 15%;
+  margin-left: 10px;
+}
+.todo {
+  height: 300px;
+  overflow-y: auto;
+}
+.todoList {
+  display: flex;
+  justify-content: flex-start;
+}
+li {
+  list-style-type: none;
+  background-color: aliceblue;
+  margin-bottom: 15px;
+  margin-left: 35px;
+  border-radius: 10px;
+  width: 80%;
+}
+.ulTag {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 20px 10px 20px;
+  margin: 10px;
+}
+.checkBox1 {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.todo::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+.todo::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2000px rgba(42, 44, 53, 0.1);
+}
+
+.todo::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 2000px rgba(78, 92, 172, 0.5);
+  background-color: #dee0e9; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  /* creates padding around scroll thumb */
+}
